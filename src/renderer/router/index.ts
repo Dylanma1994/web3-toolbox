@@ -26,9 +26,9 @@ export const routes: AppRouteRecordRaw[] = [
     children: [
       {
         path: 'index',
-        name: t('router.menu'),
+        name: t('router.home'),
         meta: {
-          title: t('router.menu'),
+          title: t('router.home'),
           icon: 'ant-design:home-outlined'
         },
         component: () => import('@/views/Home.vue')
@@ -36,29 +36,29 @@ export const routes: AppRouteRecordRaw[] = [
     ]
   },
   {
-    path: '/menu1',
+    path: '/xnm',
     component: Layout,
-    name: t('router.menu1'),
+    name: t('router.xnm'),
     meta: {
-      title: t('router.menu1'),
+      title: t('router.xnm'),
       icon: 'ant-design:cloud-server-outlined'
     },
     children: [
       {
-        path: 'menu11',
-        name: t('router.menu11'),
+        path: 'vast_normal',
+        name: t('router.vast_normal'),
         meta: {
-          title: t('router.menu11')
+          title: t('router.vast_normal')
         },
-        component: () => import('@/views/menu1/Menu11.vue')
+        component: () => import('@/views/vast/Normal.vue')
       },
       {
-        path: 'menu12',
-        name: t('router.menu12'),
+        path: 'vast_super',
+        name: t('router.vast_super'),
         meta: {
-          title: t('router.menu12')
+          title: t('router.vast_super')
         },
-        component: () => import('@/views/menu1/Menu12.vue')
+        component: () => import('@/views/vast/Super.vue')
       }
     ]
   }
